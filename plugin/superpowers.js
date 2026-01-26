@@ -1,0 +1,1 @@
+/Users/igor.mumladze/.config/opencode/superpowers/.opencode/plugin/superpowers.js
