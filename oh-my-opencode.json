@@ -1,27 +1,92 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "google_auth": false,
+  "google_auth": true,
   "agents": {
     "sisyphus": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "librarian": {
-      "model": "opencode/glm-4.7-free"
-    },
-    "explore": {
-      "model": "opencode/glm-4.7-free"
+      "model": "anthropic/claude-sonnet-4-5",
+      "variant": "high"
     },
     "oracle": {
-      "model": "opencode/grok-code"
+      "model": "anthropic/claude-sonnet-4-5",
+      "variant": "medium"
     },
-    "frontend-ui-ux-engineer": {
-      "model": "opencode/grok-code"
+    "atlas": {
+      "model": "opencode/big-pickle"
     },
-    "document-writer": {
-      "model": "opencode/grok-code"
+    "prometheus": {
+      "model": "opencode/big-pickle"
+    },
+    "metis": {
+      "model": "opencode/big-pickle"
+    },
+    "librarian": {
+      "model": "opencode/big-pickle"
+    },
+    "explore": {
+      "model": "opencode/big-pickle"
     },
     "multimodal-looker": {
-      "model": "opencode/grok-code"
+      "model": "google/antigravity-gemini-3-flash"
+    },
+    "visual-engineer": {
+      "model": "google/antigravity-gemini-3-pro",
+      "variant": "high"
+    },
+    "frontend-ui-ux-engineer": {
+      "model": "google/antigravity-gemini-3-pro",
+      "variant": "high"
+    },
+    "document-writer": {
+      "model": "opencode/big-pickle"
     }
+  },
+  "categories": {
+    "quick": {
+      "model": "opencode/big-pickle"
+    },
+    "unspecified-low": {
+      "model": "opencode/big-pickle"
+    },
+    "visual-engineering": {
+      "model": "google/antigravity-gemini-3-pro",
+      "variant": "high"
+    },
+    "unspecified-high": {
+      "model": "anthropic/claude-sonnet-4-5",
+      "variant": "medium"
+    },
+    "artistry": {
+      "model": "google/antigravity-gemini-3-pro",
+      "variant": "medium"
+    },
+    "writing": {
+      "model": "opencode/big-pickle"
+    }
+  },
+  "mcps": {
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/Users/igor.mumladze"]
+    },
+    "github": {
+      "command": "npx", 
+      "args": ["-y", "@modelcontextprotocol/server-github", "--personal-access-token", "YOUR_GITHUB_TOKEN_HERE"]
+    },
+    "npm-search": {
+      "command": "npx",
+      "args": ["-y", "@mateusribeirocampos/npm-mcp-server"]
+    },
+    "playwright": {
+      "command": "npx",
+      "args": ["-y", "@microsoft/playwright-mcp-server"]
+    },
+    "everything": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-everything"]
+    }
+  },
+  "experimental": {
+    "aggressive_truncation": true,
+    "auto_resume": true
   }
 }
